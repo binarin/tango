@@ -1,0 +1,6 @@
+db:
+  image: orchardup/postgresql
+  environment:
+    - POSTGRESQL_DB=rango_db
+    - POSTGRESQL_USER=rango_user
+    - POSTGRESQL_PASS=rango_pass
