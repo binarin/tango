@@ -4,3 +4,13 @@ db:
     - POSTGRESQL_DB=rango_db
     - POSTGRESQL_USER=rango_user
     - POSTGRESQL_PASS=rango_pass
+web:
+  image: tango
+  user: 1000
+  command: bash -c "sleep 2 && ./manage.py runserver 0.0.0.0:8000"
+  volumes:
+    - .:/code
+  ports:
+    - "8000:8000"
+  links:
+    - db:db

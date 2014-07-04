@@ -11,7 +11,7 @@ def populate(apps, schema_editor):
 
     python_cat, created = Category.objects.get_or_create(name='Python')
 
-    Page.objects.get_or_create(category=python_cat.id,
+    Page.objects.get_or_create(category=python_cat,
          title="Official Python Tutorial",
          url="http://docs.python.org/2/tutorial/")
 
